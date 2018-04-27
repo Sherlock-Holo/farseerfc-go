@@ -6,10 +6,10 @@ import (
     "mime/multipart"
     "log"
     "net/http"
-    "bufio"
+    "os"
 )
 
-func Pipeline(reader *bufio.Reader) (string, error) {
+func Pipeline() (string, error) {
     mimeBuf := new(bytes.Buffer)
 
     writer := multipart.NewWriter(mimeBuf)
@@ -20,7 +20,7 @@ func Pipeline(reader *bufio.Reader) (string, error) {
         log.Println(err)
         return "", err
     }
-    _, err = io.Copy(part, reader)
+    _, err = io.Copy(part, os.Stdin)
 
     if err != nil {
         log.Println(err)
