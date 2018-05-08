@@ -2,7 +2,7 @@ package main
 
 import (
     "flag"
-    "github.com/farseerfc-go/upload"
+    "github.com/Sherlock-Holo/farseerfc-go/upload"
     "log"
     "fmt"
     "github.com/atotto/clipboard"
