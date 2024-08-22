@@ -1,5 +1,5 @@
 module github.com/Sherlock-Holo/farseerfc-go
 
-go 1.15
+go 1.23
 
-require github.com/atotto/clipboard v0.1.2
+require github.com/atotto/clipboard v0.1.4
